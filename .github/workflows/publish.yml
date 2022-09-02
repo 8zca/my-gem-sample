@@ -22,14 +22,17 @@ jobs:
           version-file: "lib/${{ env.GEM_NAME }}/version.rb"
 
       - name: Checkout
+        if: ${{ steps.release.outputs.releases_created }}
         uses: actions/checkout@v3
 
       - name: Setup Ruby
+        if: ${{ steps.release.outputs.releases_created }}
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1
 
       - name: Setup Release Credentials
+        if: ${{ steps.release.outputs.releases_created }}
         run: |
           mkdir -p $HOME/.gem
           touch $HOME/.gem/credentials
@@ -38,6 +41,7 @@ jobs:
           echo ":github: Bearer ${{ secrets.GITHUB_TOKEN }}" >> $HOME/.gem/credentials
 
       - name: Publish Gem to GitHub Packages
+        if: ${{ steps.release.outputs.releases_created }}
         run: |
           gem build *.gemspec
           gem push --KEY github --host https://rubygems.pkg.github.com/8zca *.gem
