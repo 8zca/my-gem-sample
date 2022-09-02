@@ -12,9 +12,6 @@ jobs:
       GEM_NAME: mygem
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
       - name: Release setup
         uses: GoogleCloudPlatform/release-please-action@v3
         id: release
@@ -26,6 +23,10 @@ jobs:
           # v1.0.0行こうは外す
           bump-minor-pre-major: true
           bump-patch-for-minor-pre-major: true
+
+      - name: Checkout
+        if: ${{ steps.release.outputs.releases_created }}
+        uses: actions/checkout@v3
 
       - name: Setup Ruby
         if: ${{ steps.release.outputs.releases_created }}
