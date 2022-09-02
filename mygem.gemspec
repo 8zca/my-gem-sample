@@ -15,6 +15,7 @@ Gem::Specification.new do |spec|
 
   # spec.metadata["allowed_push_host"] = "https://rubygems.pkg.github.com/8zca"
 
+  spec.metadata["github_repo"] = "git@github.com:8zca/my-gem-sample.git"
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/8zca/my-gem-sample"
   spec.metadata["changelog_uri"] = "https://github.com/8zca/my-gem-sample/blob/main/CHANGELOG.md"
