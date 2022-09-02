@@ -1,5 +1,12 @@
 ## Changelog
 
+## [0.1.2](https://github.com/8zca/my-gem-sample/compare/v0.1.1...v0.1.2) (2022-09-02)
+
+
+### Bug Fixes
+
+* 3rd commit ([b4ccb65](https://github.com/8zca/my-gem-sample/commit/b4ccb654da6ee8ab9f080d07863da4bbc4771532))
+
 ## [0.1.1](https://github.com/8zca/my-gem-sample/compare/v1.0.0...v0.1.1) (2022-09-02)
 
 
