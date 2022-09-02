@@ -20,6 +20,9 @@ jobs:
           release-type: ruby
           package-name: ${{ env.GEM_NAME }}
           version-file: "lib/${{ env.GEM_NAME }}/version.rb"
+          # v1.0.0行こうは外す
+          bump-minor-pre-major: true
+          bump-patch-for-minor-pre-major: true
 
       - name: Checkout
         if: ${{ steps.release.outputs.releases_created }}
