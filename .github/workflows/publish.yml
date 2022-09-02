@@ -1,0 +1,43 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Ruby Gem
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GEM_NAME: mygem
+
+    steps:
+      - name: Release setup
+        uses: GoogleCloudPlatform/release-please-action@v2
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: ruby
+          package-name: ${{ env.GEM_NAME }}
+          version-file: "lib/${{ env.GEM_NAME }}/version.rb"
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+
+      - name: Setup Release Credentials
+        run: |
+          mkdir -p $HOME/.gem
+          touch $HOME/.gem/credentials
+          chmod 600 $HOME/.gem/credentials
+          echo "---" >$HOME/.gem/credentials
+          echo ":github: Bearer ${{ secrets.GITHUB_TOKEN }}" >> $HOME/.gem/credentials
+
+      - name: Publish Gem to GitHub Packages
+        run: |
+          gem build *.gemspec
+          gem push --KEY github --host https://rubygems.pkg.github.com/8zca *.gem
