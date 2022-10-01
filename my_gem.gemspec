@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/mygem/version"
+require_relative "lib/my_gem/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "mygem"
-  spec.version = Mygem::VERSION
+  spec.name = "my_gem"
+  spec.version = MyGem::VERSION
   spec.authors = ["8zca"]
 
   spec.summary = "My Library"

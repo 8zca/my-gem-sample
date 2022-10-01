@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      GEM_NAME: mygem
+      GEM_NAME: my_gem
 
     steps:
       - name: Release setup

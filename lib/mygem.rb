@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "mygem/version"
+require_relative "my_gem/version"
 
-module Mygem
+module MyGem
   class Error < StandardError; end
   # Your code goes here...
 end
