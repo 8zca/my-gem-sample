@@ -1,5 +1,12 @@
 ## Changelog
 
+## [0.1.3](https://github.com/8zca/my-gem-sample/compare/v0.1.2...v0.1.3) (2022-10-01)
+
+
+### Miscellaneous Chores
+
+* release 0.1.3 ([8faf51d](https://github.com/8zca/my-gem-sample/commit/8faf51dec7f2cedd35441e1e7c876a8d638b6b6d))
+
 ## [0.1.2](https://github.com/8zca/my-gem-sample/compare/v0.1.1...v0.1.2) (2022-09-02)
 
 
