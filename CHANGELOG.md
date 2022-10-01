@@ -1,5 +1,17 @@
 ## Changelog
 
+## [0.1.3](https://github.com/8zca/my-gem-sample/compare/v0.1.2...v0.1.3) (2022-10-01)
+
+
+### Bug Fixes
+
+* rename gem ([dafb76b](https://github.com/8zca/my-gem-sample/commit/dafb76b9c9d98deb97c69953a8a72bc82250e894))
+
+
+### Miscellaneous Chores
+
+* release 0.1.3 ([8faf51d](https://github.com/8zca/my-gem-sample/commit/8faf51dec7f2cedd35441e1e7c876a8d638b6b6d))
+
 ## [0.1.2](https://github.com/8zca/my-gem-sample/compare/v0.1.1...v0.1.2) (2022-09-02)
 
 
