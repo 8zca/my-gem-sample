@@ -1,5 +1,12 @@
 ## Changelog
 
+## [0.1.4](https://github.com/8zca/my-gem-sample/compare/v0.1.3...v0.1.4) (2022-10-04)
+
+
+### Bug Fixes
+
+* mod style ([f1acf3a](https://github.com/8zca/my-gem-sample/commit/f1acf3a0c15ecc686518ec603a5ac74c1902b915))
+
 ## [0.1.3](https://github.com/8zca/my-gem-sample/compare/v0.1.2...v0.1.3) (2022-10-01)
 
 
